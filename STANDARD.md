@@ -35,6 +35,7 @@ Cell variables are optional but are there if needed. However, they take up a lot
 ```
 0:A,
 ```
+Trailing empty cells can be omitted. The grid is looped from left to right, then down by one each time the edge is reached.
 
 # Compressing
 Every seperate part after the `UC;` header must be compressed through zlib then Base64-encoded before being concatinated. If this step isn't taken then the header must be modified to be `-UC;` instead.
