@@ -28,11 +28,11 @@ Here's an example:
 
 ## Storing Cells
 Cells are stored like this:
-```json
+```
 <rot>:<id>:<vars?>,
 ```
 Cell variables are optional but are there if needed. However, they take up a lot of space so using them sparingly is recommended. Here's an example of a right-facing mover (assuming its id in the dictionary is 65, the ASCII value for `A`):
-```json
+```
 0:A,
 ```
 
