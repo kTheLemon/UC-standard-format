@@ -17,13 +17,23 @@ Grid data contains all the grid's data:
 ```
 
 ## Cell Dictionaries
-Cell dictionaries are used to compactify the level code. They allow the cell lists to compactify the ID's as much as possible. The ID's will be turned into ASCII characters, so you'll need to seperate them by bytes. (1 byte goes up to 255). These new ID's must start at 1 to avoid null bytes. It is recommended to make lower numbers more common cells to optimise the level code, although this is not required.
+Cell dictionaries are used to compactify the level code. They allow the cell lists to compactify the ID's as much as possible. The ID's will be turned into ASCII characters (using a function equivalent to the lua `string.char`), so you'll need to seperate them by bytes. (1 byte goes up to 255). These new ID's must start at 1 to avoid null bytes. It is recommended to make lower numbers more common cells to optimise the level code, although this is not required.
 Here's an example:
 ```json
 {
   "my_epic_cell": 1,
   "ultra_mega_puller": 2
 }
+```
+
+## Storing Cells
+Cells are stored like this:
+```json
+<rot>:<id>:<vars?>,
+```
+Cell variables are optional but are there if needed. However, they take up a lot of space so using them sparingly is recommended. Here's an example of a right-facing mover (assuming its id in the dictionary is 65, the ASCII value for `A`):
+```json
+0:A,
 ```
 
 # Compressing
