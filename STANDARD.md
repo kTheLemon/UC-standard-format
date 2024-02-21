@@ -58,4 +58,5 @@ The list of universal ID's is:
 - `push3` means a three-directional cell that in its default rotation can be pushed to the right, upwards or downwards,
 - `rep` means a pushable cell that pushed a copy of the cell in front of it to its front (kinda like a front-to-front generator),
 - `enemy:n` means an enemy with n amount of health (can destroy n cells before dying) (weak enemy is `enemy:0`, normal is `enemy:1`, strong is `enemy:2`, etc...),
-- `bomb:n` means a bomb with a width and height of n (bomb:0 is an enemy, )
+- `bomb:n` means a bomb with a radius of n (`bomb:0` is an enemy, `bomb:1` is a bomb with a 3x3 effect area, `bomb:2` is a bomb with a 5x5 effect area, etc...),
+- `weakwall` means a wall that can only be destroyed by using bombs.
