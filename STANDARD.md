@@ -11,7 +11,8 @@ Grid data contains all the grid's data:
   "width": 100,
   "height": 100,
   "title": "Title",
-  "desc": "Description"
+  "desc": "Description",
+  "remake": "The Remake Machine Cell"
 }
 ```
 
@@ -26,4 +27,18 @@ Here's an example:
 ```
 
 # Compressing
-Everything after the `UC;` header must be encoded through z-lib then Base64-encoded. If this step isn't taken then the header must be modified to be `UC.;` instead.
+Everything after the `UC;` header must be encoded through z-lib then Base64-encoded. If this step isn't taken then the header must be modified to be `-UC;` instead.
+
+# Universal Cell ID's
+Some cells have universal ID's. Those should be stored as raw text, while cells with non-universal ID's should have a `+` at the start.
+The list of universal ID's is:
+- `mover` means the standard cell machine mover,
+- `gen` means the standard cell machine mover,
+- `rotcw` means the standard cell machine mover,
+- `rotccw` means the standard cell machine mover,
+- `rot180` means the standard cell machine mover,
+- `push` means the standard cell machine mover,
+- `slide` means the standard cell machine mover,
+- `wall` means the standard cell machine mover,
+- `trash` means the standard cell machine mover,
+- `enemy` means the standard cell machine mover,
