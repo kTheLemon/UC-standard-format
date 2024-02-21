@@ -27,7 +27,7 @@ Here's an example:
 ```
 
 ## Storing Cells
-Cells are stored like this:
+Cells are stored like this, the ID's are base-64 numbers:
 ```
 <rot>:<id>:<vars?>,<rot>:<id>:<vars?>,<rot>:<id>:<vars?>,...
 ```
