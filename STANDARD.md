@@ -37,7 +37,7 @@ Cell variables are optional but are there if needed. However, they take up a lot
 ```
 
 # Compressing
-Everything after the `UC;` header must be compressed through zlib then Base64-encoded. If this step isn't taken then the header must be modified to be `-UC;` instead.
+Every seperate part after the `UC;` header must be compressed through zlib then Base64-encoded before being concatinated. If this step isn't taken then the header must be modified to be `-UC;` instead.
 
 # Universal Cell ID's
 Some cells have universal ID's. Those should be stored as raw text, while cells with non-universal ID's should have a `+` at the start.
