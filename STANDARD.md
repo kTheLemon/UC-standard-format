@@ -2,7 +2,7 @@
 The UC specification.
 
 # Structure
-UC is structured similarly to other formats; starting with `UC;` to mark the code as a UC code. The structure is the following: `UC;<grid_data>;<normal_cell_dictionary><normal_cells>;<bg_cell_dictionary><bg_cells>;<fg_cell_dictionary><fg_cells>;`
+UC is structured similarly to other formats; starting with `UC;` to mark the code as a UC code. The structure is the following: `UC;<grid_data>;<bg_cell_dictionary><bg_cells>;<normal_cell_dictionary><normal_cells>;<fg_cell_dictionary><fg_cells>;<ffg_cell_dictionary><ffg_cells>...`
 
 ## Grid Data
 Grid data contains all the grid's data:
@@ -24,3 +24,6 @@ Here's an example:
   "ultra_mega_puller": 2
 }
 ```
+
+# Compressing
+Everything after the `UC;` header must be encoded through z-lib then Base64-encoded. If this step isn't taken then the header must be modified to be `UC.;` instead.
